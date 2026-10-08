@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join — Malaika</title>
+  <meta name="description" content="Join the Malaika waitlist or partner with us." />
+  <meta name="theme-color" content="#E8364F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><ellipse cx='50' cy='16' rx='22' ry='7' fill='none' stroke='%23FFC233' stroke-width='6'/><circle cx='50' cy='60' r='36' fill='%23E8364F'/></svg>" />
+  <script>try{var t=JSON.parse(localStorage.getItem("malaika:theme"));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="join">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <header class="nav" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="blob blob-1"></div>
+      <div class="container page-hero-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="join.hero.eyebrow"></span>
+          <h1 data-i18n="join.hero.title"></h1>
+          <p class="lead" data-i18n="join.hero.sub"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight-top">
+      <div class="container join-grid">
+        <div class="form-card reveal" id="waitlist">
+          <div class="mascot-wrap small" data-mascot="mascotJoin"></div>
+          <h2 data-i18n="join.waitlist.title"></h2>
+          <p class="muted" data-i18n="join.waitlist.sub"></p>
+          <form id="waitForm" novalidate>
+            <fieldset>
+              <legend data-i18n="join.waitlist.roleLabel"></legend>
+              <div class="chips" id="roleChips"></div>
+            </fieldset>
+            <label class="field">
+              <span data-i18n="join.waitlist.emailLabel"></span>
+              <input type="email" id="waitEmail" name="email" required autocomplete="email" data-i18n-placeholder="join.waitlist.placeholder" />
+            </label>
+            <button class="btn btn-primary btn-lg block" type="submit" data-i18n="join.waitlist.button"></button>
+            <p class="form-msg" id="waitMsg" role="status" aria-live="polite"></p>
+            <p class="wait-count" id="waitCountWrap" hidden><b id="waitCount">0</b> <span data-i18n="join.waitlist.count"></span></p>
+          </form>
+        </div>
+
+        <div class="form-card reveal" id="contact">
+          <h2 data-i18n="join.contact.title"></h2>
+          <p class="muted" data-i18n="join.contact.sub"></p>
+          <form id="contactForm" novalidate>
+            <label class="field"><span data-i18n="join.contact.name"></span><input name="name" required autocomplete="name" /></label>
+            <label class="field"><span data-i18n="join.contact.email"></span><input type="email" name="email" required autocomplete="email" /></label>
+            <label class="field"><span data-i18n="join.contact.org"></span><input name="org" autocomplete="organization" /></label>
+            <label class="field"><span data-i18n="join.contact.message"></span><textarea name="message" rows="5" required></textarea></label>
+            <button class="btn btn-primary btn-lg block" type="submit" data-i18n="join.contact.button"></button>
+            <p class="form-msg" id="contactMsg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+
+  <script src="js/i18n/en.js"></script>
+  <script src="js/i18n/es.js"></script>
+  <script src="js/i18n/de.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/pages/join.js"></script>
+</body>
+</html>

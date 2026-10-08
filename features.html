@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — Malaika</title>
+  <meta name="description" content="Daily quests, pain journal, crisis mode, care circle and bite-sized lessons." />
+  <meta name="theme-color" content="#E8364F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><ellipse cx='50' cy='16' rx='22' ry='7' fill='none' stroke='%23FFC233' stroke-width='6'/><circle cx='50' cy='60' r='36' fill='%23E8364F'/></svg>" />
+  <script>try{var t=JSON.parse(localStorage.getItem("malaika:theme"));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="features">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <header class="nav" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="blob blob-1"></div>
+      <div class="container page-hero-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="features.hero.eyebrow"></span>
+          <h1 data-i18n="features.hero.title"></h1>
+          <p class="lead" data-i18n="features.hero.sub"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="showcase">
+      <div class="container">
+        <div class="tabs reveal" role="tablist" id="featureTabs" aria-label="Features"></div>
+        <div class="feature-panel reveal" id="featurePanel" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="features.extras.eyebrow"></span>
+          <h2 data-i18n="features.extras.title"></h2>
+        </div>
+        <div class="grid-3" id="extras"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2 data-i18n="home.cta.title"></h2>
+            <p data-i18n="home.cta.sub"></p>
+          </div>
+          <a href="join.html" class="btn btn-gold btn-lg" data-i18n="home.cta.button"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+
+  <script src="js/i18n/en.js"></script>
+  <script src="js/i18n/es.js"></script>
+  <script src="js/i18n/de.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/pages/features.js"></script>
+</body>
+</html>

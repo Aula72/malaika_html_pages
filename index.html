@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malaika — Gamified Care</title>
+  <meta name="description" content="Malaika turns daily care for sickle cell and chronic illness into quests, streaks and rewards." />
+  <meta name="theme-color" content="#E8364F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><ellipse cx='50' cy='16' rx='22' ry='7' fill='none' stroke='%23FFC233' stroke-width='6'/><circle cx='50' cy='60' r='36' fill='%23E8364F'/></svg>" />
+  <script>try{var t=JSON.parse(localStorage.getItem("malaika:theme"));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <header class="nav" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow" data-i18n="home.hero.eyebrow"></span>
+          <h1><span data-i18n="home.hero.titleBefore"></span><br /><span class="rotator" id="rotator" aria-live="off"></span></h1>
+          <p class="lead" data-i18n="home.hero.sub"></p>
+          <div class="cta-row">
+            <a href="join.html" class="btn btn-primary btn-lg" data-i18n="home.hero.primary"></a>
+            <a href="#demo" class="btn btn-ghost btn-lg" data-i18n="home.hero.secondary"></a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="speech" data-i18n="home.hero.bubble"></div>
+          <div class="mascot-wrap" id="heroMascot" data-mascot="mascotHero"></div>
+          <div class="float-chip chip-1">🔥 <b>12</b></div>
+          <div class="float-chip chip-2">💧 <b>+20 XP</b></div>
+          <div class="float-chip chip-3">🏅</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid" id="stats"></div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container demo-grid">
+        <div class="demo-copy reveal">
+          <span class="eyebrow" data-i18n="home.demo.eyebrow"></span>
+          <h2 data-i18n="home.demo.title"></h2>
+          <p class="lead" data-i18n="home.demo.sub"></p>
+          <div class="demo-mascot">
+            <div class="mascot-wrap small" data-mascot="mascotDemo"></div>
+            <div class="speech left" id="demoMood" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="phone reveal">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-top">
+              <div class="pill streak">🔥 <b id="streakVal">0</b></div>
+              <div class="pill gem">⭐ <b id="xpVal">0</b> <span data-i18n="home.demo.xp"></span></div>
+              <div class="pill lvl"><span data-i18n="home.demo.level"></span> <b id="lvlVal">1</b></div>
+            </div>
+            <div class="ring-wrap">
+              <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" class="ring-bg" />
+                <circle cx="60" cy="60" r="52" class="ring-fg" id="ringFg" />
+              </svg>
+              <div class="ring-label"><b id="ringPct">0%</b></div>
+            </div>
+            <ul class="quests" id="quests"></ul>
+            <p class="all-done" id="allDone" data-i18n="home.demo.allDone"></p>
+            <button class="btn btn-ghost btn-sm reset" id="resetBtn" data-i18n="home.demo.reset"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="home.how.eyebrow"></span>
+          <h2 data-i18n="home.how.title"></h2>
+        </div>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="home.highlights.eyebrow"></span>
+          <h2 data-i18n="home.highlights.title"></h2>
+        </div>
+        <div class="grid-3" id="highlights"></div>
+        <p class="center-link reveal"><a href="features.html" class="btn btn-ghost" data-i18n="common.seeAll"></a></p>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="home.testimonials.eyebrow"></span>
+          <h2 data-i18n="home.testimonials.title"></h2>
+        </div>
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2 data-i18n="home.cta.title"></h2>
+            <p data-i18n="home.cta.sub"></p>
+          </div>
+          <a href="join.html" class="btn btn-gold btn-lg" data-i18n="home.cta.button"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+
+  <script src="js/i18n/en.js"></script>
+  <script src="js/i18n/es.js"></script>
+  <script src="js/i18n/de.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>
